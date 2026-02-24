@@ -20,7 +20,7 @@ def transform_data():
     df = pd.read_csv(input_path)
 
     # Tratando os preços
-    df['price'] = df['price'] / 100  # Convertendo de centavos para dólares
+    df[['price', 'initialprice']] = df[['price', 'initialprice']] / 100  # Convertendo de centavos para dólares
 
     # Criando Taxa de Aprovação (Score de 0 a 100)
     df['total_reviews'] = df['positive'] + df['negative']
@@ -31,7 +31,7 @@ def transform_data():
     df['owners_midpoint'] = df['owners'].apply(parse_owners)
 
     # Selecionando as colunas relevantes
-    cols_to_keep = ['name', 'developer', 'publisher', 'price', 'discount', 'ccu', 'positive',
+    cols_to_keep = ['name', 'developer', 'publisher', 'price', 'initialprice', 'discount', 'ccu', 'positive',
                     'owners_midpoint','approval_rate', 'average_2weeks']
     df_clean = df[cols_to_keep].copy()
 
