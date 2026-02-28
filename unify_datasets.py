@@ -7,9 +7,9 @@ def clean_game_name(text):
     text = text.lower()
 
     # Mapeando números romanos para arábicos
-    romans = {' iii': ' 3', ' ii': ' 2', ' iv': ' 4', ' v': ' 5', ' vi': ' 6', ' vii': ' 7', ' viii': ' 8', ' ix': ' 9', ' x': ' 10'}
-    for rom, ara in romans.items():
-        text = text.replace(rom, ara)
+    #romans = {' iii': ' 3', ' ii': ' 2', ' iv': ' 4', ' v': ' 5', ' vi': ' 6', ' vii': ' 7', ' viii': ' 8', ' ix': ' 9', ' x': ' 10'}
+    #for rom, ara in romans.items():
+     #   text = text.replace(rom, ara)
 
     # Removendo termos comuns que não são essenciais para a identificação do jogo
     terms_to_remove = [
