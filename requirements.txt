@@ -2,7 +2,5 @@ jupyter
 pandas
 numpy
 requests
-urllib3
-streamlit
-plotly
-python-dotenv
+seaborn
+matplotlib

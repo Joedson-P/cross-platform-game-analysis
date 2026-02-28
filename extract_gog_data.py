@@ -5,7 +5,7 @@ import os
 def fetch_top_100_gog():
     print("Iniciando a extração dos dados da GOG...")
 
-    url = 'https://catalog.gog.com/v1/catalog?limit=100&order=desc:trending&productType=in:game,pack,dlc,extras&page=1&countryCode=BR&locale=en-US&currencyCode=BRL'
+    url = 'https://catalog.gog.com/v1/catalog?limit=100&order=desc:bestselling&productType=in:game,pack&page=1&countryCode=BR&locale=en-US&currencyCode=BRL'
 
     try:
         response = requests.get(url)

@@ -4,7 +4,7 @@ import pandas as pd
 def fetch_top_100_steam():
     print("Iniciando a extração dos dados da Steam...")
 
-    url = 'https://steamspy.com/api.php?request=top100in2weeks'
+    url = 'https://steamspy.com/api.php?request=top100forever'
 
     try:
         response = requests.get(url)
